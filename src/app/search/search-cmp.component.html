@@ -1,0 +1,32 @@
+<div class="container-fluid">
+
+<label>Enter name of user:</label>
+ <form #textForm="ngForm" (ngSubmit)="getUser(textForm.value)" novalidate>
+    <em *ngIf="textForm.controls.titleInput?.invalid && (textForm.controls.titleInput?.touched)">Required</em>
+  <input ID="titleInput" required name="titleInput" type="text" (ngModel)="titleInput" placeholder="e.g eric or sushil" value="" height="20px" width="80px">
+  <button  class="btn-primary" [disabled]="textForm.invalid" >Submit</button>
+</form>
+<div class="container-fluid">
+
+          <label *ngIf= "profile?.total_count > 0">
+            TotalCountofuser: {{profile?.total_count}}
+          </label>
+          <div class="section" *ngIf= "profile?.total_count > 0">
+            <div class="well">
+  <div  *ngFor="let prof of profile?.items |slice:0:10">
+    <div class="row">
+          <img class="img-circle" width="40px" height="70px" src="{{prof.avatar_url}}"  />
+          <a [routerLink]="['/searchuser', prof.login]"> 
+          {{prof.login}}
+</a>
+<hr>
+        </div>
+        </div>
+        </div>
+      </div>
+  
+</div>
+           <router-outlet></router-outlet>
+</div>
+
+

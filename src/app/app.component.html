@@ -1,0 +1,42 @@
+
+   <!--=== Header ===-->
+  <div id="header">
+    <div class="container">
+
+      <!-- Menu -->
+      <div class="navbar navbar-default">
+        <div class="navbar-header">
+          <a class="btn navbar-btn navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="glyphicon glyphicon-bar"></span>
+            <span class="glyphicon glyphicon-bar"></span>
+            <span class="glyphicon glyphicon-bar"></span>
+          </a>
+          
+        </div>
+        <!-- /navbar-header -->
+        <!-- /nav-collapse -->
+        <div>
+          <ul class="nav navbar-nav navbar-right navbar-collapse collapse top-2" routerLinkActive="active">
+           <li class="nav-item"><a class="nav-link" routerLink="home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="about">Users </a></li>
+          </ul>
+        </div>
+        <!-- /nav-collapse -->
+      </div>
+      <!-- /navbar -->
+
+    </div>
+    <!-- /container -->
+  </div>
+  <!-- /header -->
+  <!--=== Content part ===-->
+   <div class="container">
+
+        <div class="panel panel-primary">
+    <div class="panel-body">
+          <!-- <h3>{{title}}</h3> -->
+           <router-outlet></router-outlet>
+           </div>
+         </div>
+  
+   </div>

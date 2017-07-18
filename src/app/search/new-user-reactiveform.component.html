@@ -1,0 +1,46 @@
+<div class="section">
+  <div class="well">
+    <div class="row">
+    <div class="col-md-4">
+       <form [formGroup]="prfForm" (ngSubmit)="saveForm(prfForm.value)" novalidate>
+        <div class="form-group">
+          <label for="userName"> Name:</label>
+           <!-- <em *ngIf="submitForm.controls.userName?.invalid && (submitForm.controls.userName?.touched)">Required</em> -->
+          <input  formControlName="userName" id="userName" class="form-control" placeholder="User Name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="userAddress"> Address:</label>
+           <!-- <em *ngIf="submitForm.controls.userAddress?.invalid && (submitForm.controls.userAddress?.touched)">Required</em> -->
+          <input required  formControlName="userAddress"  id="userAddress" class="form-control" placeholder="Address" />
+        </div>
+        <div class="form-group">
+          <label for="userLocation"> Location:</label>
+           <!-- <em *ngIf="submitForm.controls.userLocation?.invalid && (submitForm.controls.userLocation?.touched)">Required</em> -->
+          <input  formControlName="userLocation" id="userLocation"class="form-control" required  placeholder="Location" />
+        </div>
+         <div class="form-group">
+          <label for="userState"> State:</label>
+          <input  required   formControlName="userState"  id="userState" class="form-control" placeholder="State" />
+        </div>
+        <div class="form-group">
+          <label for="city"> City:</label>
+          <input  formControlName="city"  required  id="city" class="form-control" placeholder="city" />
+        </div>
+        <div class="form-group">
+          <label for="zipCode"> Zip:</label>
+          <input  formControlName="zipCode"  required id="zipCode" class="form-control" placeholder="Zip Code" />
+        </div>
+        <div class="form-group">
+          <label for="userComments"> Comments:</label>
+          <input  required  formControlName="userComments"  id="userComments" class="form-control" placeholder="Comments" />
+        </div>
+<div class="btn-group">
+  <button [disabled]="prfForm.invalid"class="btn-primary">Save</button>
+<button class="btn-primary" (click)="cancelOut()">Cancel</button>
+</div>
+      </form>
+    </div>
+    </div>
+  </div>
+</div>
